@@ -12,12 +12,12 @@ func main() {
   
   models.ConnectDatabase()
   r.POST("/users", controllers.CreateUser)
-  r.PATCH("/users/:id", controllers.UpdateUser) 
-  r.DELETE("/users/:id", controllers.DeleteUser)
+  r.PATCH("/users/:email", controllers.UpdateUser) 
+  r.DELETE("/users/:email", controllers.DeleteUser)
   
   
   r.GET("/users", controllers.FindUsers)
-  r.GET("/users/:id", controllers.FindUser) 
+  r.GET("/users/:email", controllers.FindUser) 
 
   
   r.GET("/", func(c *gin.Context) {
