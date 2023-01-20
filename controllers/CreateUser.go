@@ -32,6 +32,7 @@ func CreateUser(c *gin.Context) {
 		userData := users[i]
 		if userData.Email == input.Email {
 			c.JSON(http.StatusBadRequest , gin.H{"Error": "User Already Exists"})
+			return
 		}
 	}
 
