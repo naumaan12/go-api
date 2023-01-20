@@ -8,6 +8,7 @@ import (
 )
 
 type UpdateUserInput struct {
+	Email        string `json:"email"`
 	Name         string `json:"name"`
 	MobileNumber int    `json:"mobileNumber"`
 	Age          int    `json:"age"`
